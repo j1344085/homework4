@@ -54,12 +54,14 @@ public class ExamForWhile {
 
         public SumOfNumbers() {
             Scanner s = new Scanner(System.in);
-            System.out.print("\n ###1부터 입력한 수까지 더하기");
+            System.out.print("\n###1부터 입력한 수까지 더하기");
             System.out.print("마지막 수를 입력(Q:종료) >> ");
             String sinput = s.next();
             
-            if ((sinput).equals("Q") || (sinput).equals("q"))
+            if ((sinput).equals("Q") || (sinput).equals("q")){
+            	System.out.println();
                 return;
+            }
             else {
                 int input = Integer.parseInt(sinput);
                 int sum = 0;
@@ -88,8 +90,10 @@ public class ExamForWhile {
                     System.out.print("0~100사이의 숫자를 입력(Q:종료) >> ");
                     String sinput = s.next();
                     
-                    if ((sinput).equals("Q") || (sinput).equals("q"))
+                    if ((sinput).equals("Q") || (sinput).equals("q")){
+                    	System.out.println();
                         return;
+                    }
                     else {
                         a[i] = Integer.parseInt(sinput);
                         if (a[i] > max) max = a[i];      
@@ -114,8 +118,10 @@ public class ExamForWhile {
                     System.out.print("0~100사이의 숫자를 입력(Q:종료) >> ");
                     String sinput = s.next();
                     
-                    if ((sinput).equals("Q") || (sinput).equals("q"))
+                    if ((sinput).equals("Q") || (sinput).equals("q")){
+                    	System.out.println();
                         return;
+                    }
                     else {
                         a[i] = Integer.parseInt(sinput);
                         total += a[i];
@@ -128,19 +134,21 @@ public class ExamForWhile {
 
     private static class GuGuDan {
 
-        public GuGuDan() {
+        public GuGuDan() throws IOException {
             System.out.print("\n###원하는 구구단 출력하기\n");
         
             Scanner s = new Scanner(System.in);
             System.out.print("출력하고 싶은 단(Q:종료) >> ");
+            
             String sinput = s.next();
+            int input;
             
-            int input = Integer.parseInt(sinput);
-            
-            if ((sinput).equals("Q") || (sinput).equals("q"))
+            if ((sinput).equals("Q") || (sinput).equals("q")){
+            	System.out.println();
                 return;
+            }
             else {
-                
+            	input = Integer.parseInt(sinput);
                 while(true){
                     if(input == 1 || input == 10){
                         System.out.println("==> 잘못입력");
@@ -173,8 +181,10 @@ public class ExamForWhile {
             char s = (char)System.in.read();
             int num = 0;
 
-            if(s == 'Q' || s == 'q' )
+            if(s == 'Q' || s == 'q' ){
+            	System.out.println();
                 return;
+            }
             if(s == 'E' || s == 'e' )
                  num = 2;
             if(s == 'O' || s == 'o') 
